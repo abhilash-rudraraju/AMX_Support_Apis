@@ -1,0 +1,6 @@
+linux:
+	echo "Compiling for Linux OS"
+	GOOS=linux GOARCH=amd64 go build
+
+build: amx
+	@./scripts/build.sh
