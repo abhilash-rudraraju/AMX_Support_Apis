@@ -1,6 +1,7 @@
 package constants
 
 const (
-	loginEndPoint= "https://amxuat.angeltrade.com/login/v3/loginWithMPIN",
-	// positionEndpoint="https://amxuat.angeltrade.com/report/position/v2/getPosition"
+	LoginEndPoint= "https://amxuat.angeltrade.com/login/v3/loginWithMPIN"
+	LoginBearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyRGF0YSI6eyJjb3VudHJ5X2NvZGUiOiIiLCJ1c2VyX2lkIjoiQTUxNDI4MzIzIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDEtMDlUMTE6Mzc6NDEuMDkyNzkyMzA1KzA1OjMwIiwibW9iX25vIjoiIiwic291cmNlIjoiVEVTVFNVSVRFIiwiYXBwX2lkIjoicHFhXzEifSwiaXNzIjoiYW5nZWwiLCJleHAiOiIxNzM2MzE2NDYxIiwiaWF0IjoiMTY3MzI0NDQ2MSJ9.EErnBPd7UWbiZN5VLdLBPvfHb-3ZlavfeNTNU_cAa78"
+	GetSecInfoEndPoint ="https://amxuat.angeltrade.com/report/exchange/v2/getSecurityInfo"
 )
