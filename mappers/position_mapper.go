@@ -65,6 +65,5 @@ func MapPositionJsonToByte(req *models.PositionReportReq, res *models.PositionRe
 	copy(res.StrOptionType[:], []uint8(""))
 	copy(res.StrSymbolName[:], []uint8(getSecInfo["symbolName"].(string)))
 	copy(res.StrSymbolDesc[:], []uint8(getSecInfo["symbolDesc"].(string)))
-	
-	fmt.Println("res", res)
+
 }

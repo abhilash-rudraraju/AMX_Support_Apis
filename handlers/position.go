@@ -64,7 +64,7 @@ func MockPositionController(c *gin.Context) {
 	}
 
 	key := string(bytes.Trim(res.StrUserID[:], "\x00")) + "|POSITION"
-	field := string(bytes.Trim(res.StrSymbol[:], "\x00")) + "|NRML"
+	field := string(bytes.Trim(res.StrSymbol[:], "\x00")) + "|" + req.StrProduct
 
 	err = redisClient.Del(key).Err()
 	if err != nil {
@@ -76,6 +76,7 @@ func MockPositionController(c *gin.Context) {
 		return
 	}
 	//redis set
+	fmt.Println("buf",buf.Bytes());
 	err = redisClient.HSet(key, field, buf.Bytes()).Err()
 	if err != nil {
 		response := models.APIRes{
@@ -150,8 +151,8 @@ func LoginBearerToken()(string){
 		Key3 string  `json:"passOrPIN"`
     }{
         Key1: "USERID",
-        Key2: "A51428323",
-		Key3: "1234",
+        Key2: "AUTOTEST1",
+		Key3: "1111",
     }
 	payloadBytes, err := json.Marshal(payload)
     if err != nil {
